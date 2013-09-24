@@ -3,7 +3,8 @@
 #
 LIBCONFIGREAD_PROGRAM = libconfigread
 
-LIBCONFIGREAD_SOURCES = src/libConfigReader.cc
+LIBCONFIGREAD_SOURCES = src/libConfigReader.cc \
+						src/envVariable.cc
 
 # Temporary files
 LIBCONFIGREAD_OBJS = $(LIBCONFIGREAD_SOURCES:.cc=.o)

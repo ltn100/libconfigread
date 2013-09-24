@@ -6,6 +6,7 @@
  */
 
 #include "libConfigReader.h"
+#include "envVariable.h"
 
 
 using namespace libconfig;
@@ -59,9 +60,14 @@ map<string,string> LibConfigReader::getPathContents(string path) {
 
 int main(int argc, char** argv) {
 
-    LibConfigReader lconf;
+    //LibConfigReader lconf;
 
-    lconf.loadConfigFile(argv[1]);
+    //lconf.loadConfigFile(argv[1]);
+
+    EnvVariable var("hello");
+    var = "thing";
+
+    var.send();
 
     return 0;
 }
