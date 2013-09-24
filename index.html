@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+
+    <title>Libconfigread by ltn100</title>
+  </head>
+
+  <body>
+
+    <header>
+      <div class="container">
+        <h1>Libconfigread</h1>
+        <h2>A libconfig compatible reader for bash</h2>
+
+        <section id="downloads">
+          <a href="https://github.com/ltn100/libconfigread/zipball/master" class="btn">Download as .zip</a>
+          <a href="https://github.com/ltn100/libconfigread/tarball/master" class="btn">Download as .tar.gz</a>
+          <a href="https://github.com/ltn100/libconfigread" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
+        </section>
+      </div>
+    </header>
+
+    <div class="container">
+      <section id="main_content">
+        <h1>
+<a name="libconfigread" class="anchor" href="#libconfigread"><span class="octicon octicon-link"></span></a>libconfigread</h1>
+
+<p>A <a href="http://www.hyperrealm.com/libconfig/">libconfig</a> compatible reader for bash.</p>
+
+<p>This is a work in progress, an example use case for libconfigread would be:</p>
+
+<pre><code>$ cat myconfig.cfg
+# An example libconfig configuration file
+groceries = {
+    fruit    = "apples";
+    veg      = "potatoes";
+    meat     = "beef";
+};
+$ libconfigread myarray &lt; myconfig.cfg
+$ echo ${!myarray[@]}
+groceries,veg groceries,fruit groceries,meat
+$ echo ${myarray[groceries,fruit]}
+apples
+$ echo ${myarray[groceries,veg]}
+potatoes
+$ echo ${myarray[groceries,meat]}
+beef
+</code></pre>
+      </section>
+    </div>
+
+    
+  </body>
+</html>
