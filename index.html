@@ -42,7 +42,7 @@ groceries = {
     veg      = "potatoes";
     meat     = "beef";
 };
-$ libconfigread myarray &lt; myconfig.cfg
+$ eval $(libconfigread myarray &lt; myconfig.cfg)
 $ echo ${!myarray[@]}
 groceries,veg groceries,fruit groceries,meat
 $ echo ${myarray[groceries,fruit]}
